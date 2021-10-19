@@ -1,0 +1,9 @@
+*.min.js
+*.css
+*.scss
+build/
+dist/
+build-utils/
+*.html
+*.svg
+
