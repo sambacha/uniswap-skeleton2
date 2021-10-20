@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Skeleton Web3 Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A boilerplate web3-enabled interface forked from Uniswap interface. Some leftover Uniswap specific code.
 
-## Available Scripts
+[![nodejs](https://github.com/sambacha/uniswap-skeleton2/workflows/nodejs/badge.svg)](https://github.com/sambacha/uniswap-skeleton2/actions?query=workflow:"nodejs")
+[![GitHub tag](https://img.shields.io/github/tag/sambacha/uniswap-skeleton2?include_prereleases=&sort=semver&color=blue)](https://github.com/sambacha/uniswap-skeleton2/releases/)
+[![License](https://img.shields.io/badge/License-GPL--3.0-blue)](#license)
+[![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+This is an refactored fork of [ianlapham's skeleton-web3-interface](https://github.com/ianlapham/skeleton-web3-interface)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Development
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+yarn
+```
 
-### `npm test`
+### Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn start
+```
 
-### `npm run build`
+### Configuring the environment (optional)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To have the interface default to a different network when a wallet is not connected:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Make a copy of `.env` named `.env.local`
+2. Change `REACT_APP_NETWORK_ID` to `"{YOUR_NETWORK_ID}"`
+3. Change `REACT_APP_NETWORK_URL` to e.g. `"https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}"`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Note that the interface only works on testnets where both
+[Uniswap V2](https://uniswap.org/docs/v2/smart-contracts/factory/) and
+[multicall](https://github.com/makerdao/multicall) are deployed.
+The interface will not work on other networks.
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## License
+
+Released under [GPL-3.0](/LICENSE)
